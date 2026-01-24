@@ -391,3 +391,113 @@ ul { list-style: none; }
     .quote { font-size: 1rem; }
     .hero-text h1 { font-size: 2rem; }
 }
+
+/* =========================================
+   إضافات صفحة الخدمات (Services Page Styles)
+   ========================================= */
+
+/* تنسيق قسم التفاصيل العلوي */
+.service-detail {
+    padding: 40px 0;
+}
+.service-header {
+    margin-bottom: 40px;
+}
+.service-header span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+.service-header h2 {
+    font-size: 2rem;
+    color: var(--dark-navy);
+    font-weight: 800;
+}
+
+/* شبكة الصور (Gallery Grid) - 3 أعمدة وصفين */
+.service-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+    gap: 20px;
+    margin-bottom: 60px;
+}
+.gallery-img {
+    width: 100%;
+    height: 250px; /* ارتفاع الصورة */
+    border-radius: 10px;
+    background-color: #eee;
+    transition: transform 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+.gallery-img:hover {
+    transform: scale(1.02);
+}
+
+/* قسم أزرار التنقل (Navigation Tabs) */
+.services-nav {
+    padding: 20px 0 80px;
+    position: relative;
+}
+.services-nav h3 {
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.services-tabs-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tabs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عمودين للموبايل */
+    gap: 15px;
+}
+
+/* تنسيق الأزرار */
+.service-tab-btn {
+    padding: 15px 20px;
+    background-color: #e8f4f8; /* اللون السماوي الفاتح */
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--dark-navy);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* الزر النشط (Dark Blue) */
+.service-tab-btn.active, .service-tab-btn:hover {
+    background-color: var(--dark-navy);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* جعل آخر زر (SEO) يأخذ العرض كامل في الشاشات الكبيرة ليطابق التصميم */
+@media (min-width: 768px) {
+    .tabs-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .service-tab-btn:last-child {
+        grid-column: span 2; /* يمتد على عمودين */
+        max-width: 60%; /* تقليل عرضه قليلاً ليصبح شكله أجمل */
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* Responsiveness for Services Page */
+@media (max-width: 768px) {
+    .service-gallery {
+        grid-template-columns: 1fr; /* عمود واحد في الموبايل */
+        height: auto;
+    }
+    .gallery-img { height: 200px; }
+}
