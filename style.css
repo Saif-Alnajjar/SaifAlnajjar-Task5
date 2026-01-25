@@ -504,3 +504,101 @@ ul { list-style: none; }
     }
     .gallery-img { height: 200px; }
 }
+
+/* =========================================
+   تنسيقات صفحة من نحن (About Page)
+   ========================================= */
+
+.about-hero {
+    padding: 60px 0 100px;
+    position: relative;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* تقسيم الصفحة نصفين */
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text .sub-title {
+    color: var(--text-light);
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    color: var(--dark-navy);
+    font-weight: 800;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+/* النقاط الملونة فوق كلمة رواد (تجميلية) */
+.highlight-dots::after {
+    content: '...'; 
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: #d4b8e3; /* لون بنفسجي فاتح */
+    font-size: 3rem;
+    letter-spacing: -5px;
+    line-height: 0;
+}
+
+.about-text p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    max-width: 90%;
+}
+
+/* تنسيق منطقة الصورة */
+.about-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-about-img {
+    width: 100%;
+    height: 400px; /* ارتفاع الصورة */
+    border-radius: 20px;
+    background-color: #eee; /* لون مؤقت */
+    position: relative;
+    z-index: 2;
+    background-image: url('path-to-your-image.jpg'); /* ضع رابط الصورة هنا */
+    background-size: cover;
+    background-position: center;
+}
+
+/* الدائرة الحلزونية خلف الصورة */
+.bg-circle-large {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #b5dcc8; /* لون الدائرة الأخضر الفاتح */
+    border-radius: 50%;
+    top: -30px;
+    right: -30px;
+    z-index: 1;
+}
+
+/* استجابة الشاشة للموبايل */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* عمود واحد */
+        text-align: center;
+    }
+    .about-text p {
+        margin: 0 auto 20px; /* توسيط النص */
+    }
+    .bg-circle-large {
+        right: 10px; /* تعديل مكان الدائرة */
+    }
+}
