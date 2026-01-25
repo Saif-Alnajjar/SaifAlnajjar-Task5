@@ -603,63 +603,67 @@ ul { list-style: none; }
     }
 }
 
+
 /* =========================================
-   تنسيقات صفحة تواصل معنا (Contact Page)
+   تنسيقات صفحة تواصل معنا (Contact Page) - محدث
    ========================================= */
 
 .contact-section {
     padding: 40px 0 80px;
     position: relative;
-    min-height: 80vh; /* لجعل الصفحة تبدو ممتلئة */
+    min-height: 80vh;
 }
 
-/* البطاقة الكبيرة التي تحتوي النموذج والخريطة */
+/* البطاقة الكبيرة الموحدة */
 .contact-card-wrapper {
-    background-color: #3b7d85; /* اللون البترولي/الأخضر الغامق من الصورة */
+    background-color: #1a808d; /* لون موحد للبطاقة بالكامل (بترولي غامق) */
     border-radius: 20px;
-    padding: 0;
+    padding: 40px; /* مسافة داخلية للبطاقة ككل */
     display: flex;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    gap: 40px; /* مسافة بين القسمين */
+    box-shadow: 0 15px 30px rgba(26, 128, 141, 0.2);
     color: #fff;
     max-width: 1000px;
     margin: 40px auto;
+    align-items: flex-start;
 }
 
-/* الجزء الأيمن (النموذج) */
+/* الجزء الأيسر (النموذج) */
 .contact-form-side {
-    flex: 1;
-    padding: 40px;
+    flex: 1.2; /* يأخذ مساحة أكبر قليلاً */
 }
 
 .contact-form-side h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
-    font-weight: 700;
+    margin-bottom: 15px;
+    font-weight: 800;
 }
 
 .contact-form-side p {
     margin-bottom: 30px;
     opacity: 0.9;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-group input, 
 .form-group textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-family: 'Cairo', sans-serif;
     outline: none;
+    background-color: #fff;
+    font-size: 0.95rem;
 }
 
 .form-group textarea {
     resize: none;
+    height: 120px;
 }
 
 /* زر الإرسال الأسود */
@@ -668,68 +672,70 @@ ul { list-style: none; }
     background-color: #0b132b; /* كحلي غامق جداً */
     color: #fff;
     border: none;
-    padding: 12px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: 'Cairo', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.1rem;
     transition: 0.3s;
 }
 .btn-dark-block:hover {
-    background-color: #1a2542;
+    background-color: #000;
 }
 
-/* الجزء الأيسر (الخريطة والمعلومات) */
+/* الجزء الأيمن (الخريطة والمعلومات) */
 .contact-info-side {
-    flex: 1;
-    padding: 20px;
-    background-color: #357077; /* درجة أغمق قليلاً للتمييز أو نفس اللون */
+    flex: 0.8;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-.map-container {
+/* مكان صورة الخريطة */
+.map-placeholder-img {
     width: 100%;
-    height: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    background-color: #ccc;
+    height: 280px;
+    border-radius: 15px;
+    background-color: #e0f7fa; /* لون فاتح مؤقت */
+    color: #1a808d;
+    margin-bottom: 30px;
+    /* عندما تضيف الصورة استخدم هذا: */
+    /* background-image: url('map-image.jpg'); background-size: cover; */
 }
 
 .info-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    text-align: right;
 }
 
 .info-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    direction: ltr; /* لجعل الأرقام تظهر بشكل صحيح مع الأيقونة */
-    justify-content: flex-end; /* محاذاة لليمين لأننا عكسنا الاتجاه */
+    justify-content: flex-end; /* النص على اليمين والأيقونة على اليسار */
+    gap: 15px;
+    font-size: 1.1rem;
 }
 
-/* تعديل الاتجاه للعربية في القائمة */
-.contact-info-side .info-item {
-    flex-direction: row-reverse; 
+.info-phone {
+    direction: ltr; /* لعرض رقم الهاتف بشكل صحيح */
 }
 
 .info-item i {
-    background-color: #0b132b;
-    color: #fff;
-    width: 35px;
-    height: 35px;
+    background-color: #fff; /* خلفية بيضاء للأيقونة */
+    color: #1a808d; /* لون الأيقونة بترولي */
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    flex-shrink: 0;
 }
 
-/* الأيقونة العائمة (واتساب) */
+/* الأيقونة العائمة (واتساب) - نفس السابق */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -752,36 +758,30 @@ ul { list-style: none; }
     transform: scale(1.1);
 }
 
-/* الأشكال الخلفية (Blobs) */
+/* الأشكال الخلفية - نفس السابق */
 .shape-blob {
     position: absolute;
     z-index: -1;
     opacity: 0.6;
 }
-.shape-1 {
-    top: 10%;
-    left: 5%;
-    width: 100px;
-    height: 100px;
-    background-color: #e0f7fa; /* لون فاتح جداً */
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-.shape-2 {
-    bottom: 15%;
-    right: 5%;
-    width: 150px;
-    height: 150px;
-    background-color: #e8eaf6;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-}
+.shape-1 { top: 10%; left: 5%; width: 100px; height: 100px; background-color: #e0f7fa; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+.shape-2 { bottom: 15%; right: 5%; width: 150px; height: 150px; background-color: #e8eaf6; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
 
-/* Responsiveness for Contact Page */
+/* استجابة للموبايل */
 @media (max-width: 768px) {
     .contact-card-wrapper {
-        flex-direction: column;
-        margin: 0 15px;
+        flex-direction: column-reverse; /* النموذج فوق والخريطة تحت في الموبايل */
+        padding: 20px;
+        margin: 20px;
+        gap: 30px;
     }
-    .contact-info-side {
-        order: -1; /* رفع الخريطة للأعلى في الموبايل */
+    .contact-form-side, .contact-info-side {
+        flex: auto;
+        width: 100%;
+    }
+    .info-item {
+        justify-content: flex-end;
     }
 }
+
+
