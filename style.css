@@ -693,14 +693,14 @@ ul { list-style: none; }
 
 /* مكان صورة الخريطة */
 .map-placeholder-img {
-    width: 100%;
-    height: 280px;
-    border-radius: 15px;
-    background-color: #e0f7fa; /* لون فاتح مؤقت */
-    color: #1a808d;
-    margin-bottom: 30px;
-    /* عندما تضيف الصورة استخدم هذا: */
-    /* background-image: url('map-image.jpg'); background-size: cover; */
+    width: 100%;         /* تأخذ عرض العمود بالكامل */
+    height: 250px;       /* ارتفاع ثابت عشان ما تكون طويلة كثير */
+    object-fit: cover;   /* أهم سطر: يقص الزوائد عشان الصورة ما تمط */
+    border-radius: 15px; /* حواف دائرية ناعمة زي التصميم */
+    margin-bottom: 20px; /* مسافة تحتها */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* برواز خفيف جداً (اختياري) */
+}
+
 }
 
 .info-list {
