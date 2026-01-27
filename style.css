@@ -899,3 +899,36 @@ ul { list-style: none; }
         width: 100%;
     }
 }
+
+/* تنسيق قسم المخطط */
+.process-section {
+    padding: 60px 0;
+    background-color: #fff; /* خلفية بيضاء عشان المخطط يبرز */
+}
+
+.process-section .section-head p {
+    color: #777;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.process-img-box {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.diagram-img {
+    max-width: 90%; /* تأخذ 90% من عرض الشاشة كحد أقصى */
+    height: auto;   /* الطول يتغير أوتوماتيك حسب العرض */
+    border-radius: 15px; /* حواف ناعمة */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* ظل خفيف يعطي فخامة */
+    transition: transform 0.3s;
+}
+
+.diagram-img:hover {
+    transform: translateY(-5px); /* حركة طفيفة عند وضع الماوس */
+}
