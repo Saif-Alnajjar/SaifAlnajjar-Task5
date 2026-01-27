@@ -785,3 +785,117 @@ ul { list-style: none; }
 }
 
 
+/* تنسيق قسم البرسونا */
+.personas-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.personas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.persona-card {
+    display: flex;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    align-items: center;
+}
+
+/* الكارت الثاني بلون مختلف قليلاً */
+.persona-card.reverse {
+    background: #889298; /* اللون الرمادي الغامق من التصميم */
+    color: #fff;
+}
+.persona-card.reverse .persona-header ul li,
+.persona-card.reverse .role {
+    color: #e0e0e0;
+}
+.persona-card.reverse .quote-box {
+    background: rgba(255,255,255,0.1);
+    border-left: 3px solid #fff;
+    color: #fff;
+}
+
+.persona-img-box {
+    width: 35%;
+    height: 100%;
+    min-height: 350px;
+}
+
+.persona-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.persona-content {
+    width: 65%;
+    padding: 30px;
+}
+
+.persona-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.persona-header h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.persona-header .role {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    margin-right: 10px;
+}
+
+.persona-header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.persona-body h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.challenges-list {
+    list-style: disc inside;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.quote-box {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    border-right: 4px solid var(--main-color); /* لون الموقع الرئيسي */
+    font-style: italic;
+    color: #333;
+}
+
+/* التجاوب مع الموبايل */
+@media (max-width: 768px) {
+    .persona-card {
+        flex-direction: column;
+    }
+    .persona-img-box {
+        width: 100%;
+        height: 250px;
+    }
+    .persona-content {
+        width: 100%;
+    }
+}
