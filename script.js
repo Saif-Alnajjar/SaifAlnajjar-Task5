@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ==========================================
-    // كود السلايدر (الصفحة الرئيسية) - كما هو
+    // كود السلايدر (الصفحة الرئيسية)
     // ==========================================
     let slideIndex = 0;
     const slides = document.getElementsByClassName("slide");
     const dots = document.getElementsByClassName("dot");
     
-    if (slides.length > 0) { // check if slider exists on page
+    if (slides.length > 0) { 
         const slideInterval = 5000;
 
         function showSlides(n) {
@@ -39,33 +39,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // كود صفحة الخدمات (تبديل المحتوى)
     // ==========================================
     
-    // قاعدة بيانات المحتوى بناءً على الصور التي أرسلتها
     const servicesData = {
         'marketing': {
             subtitle: '- التسويق الإلكتروني',
             title: 'التسويق الإلكتروني يضمن لمشروعك<br>حضوراً قوياً ونتائج قابلة للقياس!',
-            // يمكنك وضع روابط صور حقيقية هنا لاحقاً
-            images: ['images/IMG_0045.jpeg', 'images/IMG_0073.jpeg', 'images/IMG_0047.jpeg', 'images/IMG_0052.jpeg', 'images/IMG_0044.jpeg', 'images/IMG_0067.jpeg']
+            // تأكد أن أسماء الصور هنا تطابق الملفات في مجلد images بالضبط
+            images: [
+                'images/IMG_0045.jpeg', 
+                'images/IMG_0073.jpeg', 
+                'images/IMG_0047.jpeg', 
+                'images/IMG_0052.jpeg', 
+                'images/IMG_0044.jpeg', 
+                'images/IMG_0067.jpeg'
+            ]
         },
         'social': {
             subtitle: '- إدارة صفحات سوشيال ميديا',
             title: 'تصاميم السوشيال ميديا المميزة<br>سبب في جذب المتابعين لمنتجاتك!',
-            images: ['soc1.jpg', 'soc2.jpg', 'soc3.jpg', 'soc4.jpg', 'soc5.jpg', 'soc6.jpg']
+            // ⚠️ ملاحظة: تأكد من إضافة "images/" قبل اسم الصورة إذا كانت داخل المجلد
+            images: ['images/soc1.jpg', 'images/soc2.jpg', 'images/soc3.jpg', 'images/soc4.jpg', 'images/soc5.jpg', 'images/soc6.jpg']
         },
         'web': {
             subtitle: '- إنشاء المواقع الإلكترونية',
             title: 'خدمة إنشاء المواقع الإلكترونية هي<br>حجر الأساس لأي مشروع يسعى للنجاح!',
-            images: ['web1.jpg', 'web2.jpg', 'web3.jpg', 'web4.jpg', 'web5.jpg', 'web6.jpg']
+            images: ['images/web1.jpg', 'images/web2.jpg', 'images/web3.jpg', 'images/web4.jpg', 'images/web5.jpg', 'images/web6.jpg']
         },
         'ads': {
             subtitle: '- إدارة الحملات الترويجية',
             title: 'إدارة الحملات الترويجية تضمن<br>استثمار ميزانيتك الإعلانية بأفضل النتائج!',
-            images: ['ads1.jpg', 'ads2.jpg', 'ads3.jpg', 'ads4.jpg', 'ads5.jpg', 'ads6.jpg']
+            images: ['images/ads1.jpg', 'images/ads2.jpg', 'images/ads3.jpg', 'images/ads4.jpg', 'images/ads5.jpg', 'images/ads6.jpg']
         },
         'seo': {
             subtitle: '- تحسين محركات البحث SEO',
             title: 'خدمة SEO تضمن لموقعك الظهور<br>في المكان الصحيح أمام الجمهور الصحي!',
-            images: ['seo1.jpg', 'seo2.jpg', 'seo3.jpg', 'seo4.jpg', 'seo5.jpg', 'seo6.jpg']
+            images: ['images/seo1.jpg', 'images/seo2.jpg', 'images/seo3.jpg', 'images/seo4.jpg', 'images/seo5.jpg', 'images/seo6.jpg']
         }
     };
 
@@ -77,16 +84,17 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('service-subtitle').innerText = data.subtitle;
         document.getElementById('service-title').innerHTML = data.title;
 
-        // 2. تحديث الصور (هنا نستخدم Placeholders ولكن يمكنك وضع صور حقيقية)
+        // 2. تحديث الصور
         const galleryContainer = document.getElementById('service-gallery');
         galleryContainer.innerHTML = ''; // مسح الصور القديمة
         
-        // إعادة بناء 6 صور جديدة
-        data.images.forEach((img, index) => {
+        // إنشاء الصور الجديدة
+        data.images.forEach((imgSrc, index) => {
             const div = document.createElement('div');
             div.className = 'img-placeholder gallery-img';
-            div.innerText = `${data.subtitle} - صورة ${index + 1}`;
-            // div.style.backgroundImage = `url(${img})`; // استخدم هذا السطر عند توفر صور حقيقية
+            
+            // 👇 التعديل المهم هنا: وضعنا كود الصورة بدلاً من النص
+            div.innerHTML = `<img src="${imgSrc}" alt="${data.subtitle}" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;">`;
             
             // تأثير حركة بسيط عند التغيير
             div.style.animation = `fadeEffect 0.5s ease ${index * 0.1}s forwards`;
