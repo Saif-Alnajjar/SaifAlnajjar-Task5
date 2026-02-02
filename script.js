@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
             subtitle: '- إنشاء المواقع الإلكترونية',
             title: 'بناء مواقع عصرية وسريعة...',
             images: [
-                'images/IMG_0045.jpeg',
-                'images/IMG_0051.jpeg', 
+                'images/IMG_0051.jpeg',
+                'images/IMG_0075.jpeg', 
                 'images/IMG_0068.jpeg', 
                 'images/IMG_0064.jpeg', 
                 'images/IMG_0058.jpeg', 
