@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         'marketing': {
             subtitle: '- التسويق الإلكتروني',
             title: 'التسويق الإلكتروني يضمن لمشروعك<br>حضوراً قوياً',
-            // تأكد من صحة المسارات هنا
             images: [
                 'images/IMG_0045.jpeg', 
                 'images/IMG_0073.jpeg', 
@@ -44,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'social': {
             subtitle: '- إدارة صفحات سوشيال ميديا',
             title: 'تصاميم السوشيال ميديا المميزة...',
-            images: ['images/IMG_0066.jpeg', 
+            images: [
+                'images/IMG_0066.jpeg', 
                 'images/IMG_0074.jpeg', 
                 'images/IMG_0059.jpeg', 
                 'images/IMG_0072.jpeg', 
@@ -55,7 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'web': {
             subtitle: '- إنشاء المواقع الإلكترونية',
             title: 'بناء مواقع عصرية وسريعة...',
-            images: ['images/IMG_0045.jpeg', 
+            images: [
+                'images/IMG_0045.jpeg',
                 'images/IMG_0051.jpeg', 
                 'images/IMG_0068.jpeg', 
                 'images/IMG_0064.jpeg', 
@@ -66,7 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'ads': {
             subtitle: '- إدارة الحملات الترويجية',
             title: 'نتائج إعلانية مضمونة...',
-            images: ['images/IMG_0043.jpeg', 
+            images: [
+                'images/IMG_0043.jpeg', 
                 'images/IMG_0049.jpeg', 
                 'images/IMG_0062.jpeg', 
                 'images/IMG_0053.jpeg', 
@@ -77,7 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'seo': {
             subtitle: '- تحسين محركات البحث',
             title: 'تصدر نتائج البحث الأولى...',
-            images: ['images/IMG_0065.jpeg', 
+            images: [
+                'images/IMG_0065.jpeg', 
                 'images/IMG_0048.jpeg', 
                 'images/IMG_0056.jpeg', 
                 'images/IMG_0054.jpeg', 
