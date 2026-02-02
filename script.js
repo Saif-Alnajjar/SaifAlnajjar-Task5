@@ -44,22 +44,46 @@ document.addEventListener('DOMContentLoaded', function() {
         'social': {
             subtitle: '- إدارة صفحات سوشيال ميديا',
             title: 'تصاميم السوشيال ميديا المميزة...',
-            images: ['images/soc1.jpg', 'images/soc2.jpg', 'images/soc3.jpg', 'images/soc4.jpg', 'images/soc5.jpg', 'images/soc6.jpg']
+            images: ['images/IMG_0066.jpeg', 
+                'images/IMG_0074.jpeg', 
+                'images/IMG_0059.jpeg', 
+                'images/IMG_0072.jpeg', 
+                'images/IMG_0055.jpeg', 
+                'images/IMG_0061.jpeg'
+                     ]
         },
         'web': {
             subtitle: '- إنشاء المواقع الإلكترونية',
             title: 'بناء مواقع عصرية وسريعة...',
-            images: ['images/web1.jpg', 'images/web2.jpg', 'images/web3.jpg', 'images/web4.jpg', 'images/web5.jpg', 'images/web6.jpg']
+            images: ['images/IMG_0045.jpeg', 
+                'images/IMG_0051.jpeg', 
+                'images/IMG_0068.jpeg', 
+                'images/IMG_0064.jpeg', 
+                'images/IMG_0058.jpeg', 
+                'images/IMG_0060.jpeg'
+                     ]
         },
         'ads': {
             subtitle: '- إدارة الحملات الترويجية',
             title: 'نتائج إعلانية مضمونة...',
-            images: ['images/ads1.jpg', 'images/ads2.jpg', 'images/ads3.jpg', 'images/ads4.jpg', 'images/ads5.jpg', 'images/ads6.jpg']
+            images: ['images/IMG_0043.jpeg', 
+                'images/IMG_0049.jpeg', 
+                'images/IMG_0062.jpeg', 
+                'images/IMG_0053.jpeg', 
+                'images/IMG_0046.jpeg', 
+                'images/IMG_0071.jpeg'
+                     ]
         },
         'seo': {
             subtitle: '- تحسين محركات البحث',
             title: 'تصدر نتائج البحث الأولى...',
-            images: ['images/seo1.jpg', 'images/seo2.jpg', 'images/seo3.jpg', 'images/seo4.jpg', 'images/seo5.jpg', 'images/seo6.jpg']
+            images: ['images/IMG_0065.jpeg', 
+                'images/IMG_0048.jpeg', 
+                'images/IMG_0056.jpeg', 
+                'images/IMG_0054.jpeg', 
+                'images/IMG_0063.jpeg', 
+                'images/IMG_0050.jpeg'
+                     ]
         }
     };
 
