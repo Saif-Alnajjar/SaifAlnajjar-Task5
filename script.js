@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             subtitle: '- التسويق الإلكتروني',
             title: 'التسويق الإلكتروني يضمن لمشروعك<br>حضوراً قوياً ونتائج قابلة للقياس!',
             // يمكنك وضع روابط صور حقيقية هنا لاحقاً
-            images: ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg']
+            images: ['images/IMG_0045.jpeg', 'images/IMG_0073.jpeg', 'images/IMG_0047.jpeg', 'images/IMG_0052.jpeg', 'images/IMG_0044.jpeg', 'images/IMG_0067.jpeg']
         },
         'social': {
             subtitle: '- إدارة صفحات سوشيال ميديا',
